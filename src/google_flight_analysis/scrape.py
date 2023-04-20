@@ -260,11 +260,13 @@ class _Scrape:
 				emission += [0 if g[7 + i_diff] == 'Avg emissions' else int(g[7 + i_diff].split('%')[0])]
 
 				#price += [float(g[8 + i_diff][1:].replace(',',''))]
+				price += [g[8 + i_diff][1:].replace(',','')]
 				trip_type += [g[9 + i_diff]]
 			else:
 				co2_emission += [None]
 				emission += [None]
 				#price += [float(g[7 + i_diff][1:].replace(',',''))]
+				price += [g[7 + i_diff][1:].replace(',','')]
 				trip_type += [g[8 + i_diff]]
 
 
